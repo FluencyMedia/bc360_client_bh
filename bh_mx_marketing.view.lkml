@@ -21,7 +21,7 @@ view: bh_mx_marketing {
 view: bh_mx_marketing_ppc {
   view_label: "BH - Marketing Insights"
   label: "BH - PPC Only"
-  extends: [mx_marketing_base]
+  extends: [bh_mx_marketing]
 
   derived_table: {
     datagroup_trigger: dg_bc360_mx_marketing
@@ -40,7 +40,7 @@ view: bh_mx_marketing_ppc {
 view: bh_mx_marketing_display {
   view_label: "BH - Marketing Insights"
   label: "BH - Display Only"
-  extends: [mx_marketing_base]
+  extends: [bh_mx_marketing]
 
   derived_table: {
     datagroup_trigger: dg_bc360_mx_marketing
