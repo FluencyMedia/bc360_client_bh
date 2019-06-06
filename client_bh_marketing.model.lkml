@@ -9,6 +9,7 @@ include: "//bc360_marketing/*.view.lkml"
 
 
 include: "*.view.lkml"
+# include: "*.dashboard.lkml"
 
 label: "BC360 - Beaumont Health"
 
