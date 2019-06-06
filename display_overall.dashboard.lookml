@@ -8,16 +8,16 @@
     explore: bh_mx_display
     type: looker_timeline
     fields: [arch_campaigns_admin.program, arch_campaigns_admin.service_line, arch_campaigns_admin.campaign,
-      mx_marketing.date_start, mx_marketing.date_end, mx_marketing.cost_sum, mx_marketing.date_diff]
+      bh_mx_marketing_display.date_start, bh_mx_marketing_display.date_end, bh_mx_marketing_display.cost_sum, bh_mx_marketing_display.date_diff]
     filters:
-      bc360_mx_main.client: Beaumont Health
-      mx_marketing.date_date: 15 months ago for 15 months
+      bh_mx_display.client: Beaumont Health
+      bh_mx_marketing_display.date_date: 15 months ago for 15 months
       arch_campaigns_admin.medium: Display
-    sorts: [arch_campaigns_admin.program, arch_campaigns_admin.service_line, mx_marketing.date_start
+    sorts: [arch_campaigns_admin.program, arch_campaigns_admin.service_line, bh_mx_marketing_display.date_start
         desc]
     limit: 500
-    dynamic_fields: [{table_calculation: daily_spend, label: "$ Daily Spend", expression: "${mx_marketing.cost_sum}\n\
-          \  /${mx_marketing.date_diff}", value_format: !!null '', value_format_name: usd,
+    dynamic_fields: [{table_calculation: daily_spend, label: "$ Daily Spend", expression: "${bh_mx_marketing_display.cost_sum}\n\
+          \  /${bh_mx_marketing_display.date_diff}", value_format: !!null '', value_format_name: usd,
         _kind_hint: measure, _type_hint: number}]
     query_timezone: America/New_York
     color_application:
@@ -40,8 +40,8 @@
     labelSize: 10pt
     valueFormat: mmm-yy
     showLegend: false
-    hidden_fields: [arch_campaigns_admin.program, arch_campaigns_admin.campaign, mx_marketing.cost_sum,
-      mx_marketing.date_diff]
+    hidden_fields: [arch_campaigns_admin.program, arch_campaigns_admin.campaign, bh_mx_marketing_display.cost_sum,
+      bh_mx_marketing_display.date_diff]
     series_types: {}
     row: 0
     col: 0
@@ -50,17 +50,17 @@
   - title: Display - Detailed Stats (2019)
     name: Display - Detailed Stats (2019)
     model: client_bh_marketing
-    model: bh_mx_display
+    explore: bh_mx_display
     type: table
-    fields: [arch_campaigns_admin.service_line, mx_marketing.date_month, mx_marketing.cost_sum,
-      mx_marketing.clicks_sum, mx_marketing.ctr, mx_marketing.cpc]
-    pivots: [mx_marketing.date_month]
+    fields: [arch_campaigns_admin.service_line, bh_mx_marketing_display.date_month, bh_mx_marketing_display.cost_sum,
+      bh_mx_marketing_display.clicks_sum, bh_mx_marketing_display.ctr, bh_mx_marketing_display.cpc]
+    pivots: [bh_mx_marketing_display.date_month]
     filters:
-      bc360_mx_main.client: Beaumont Health
-      mx_marketing.date_date: '2019'
-      mx_marketing.cost_sum: NOT NULL
+      bh_mx_display.client: Beaumont Health
+      bh_mx_marketing_display.date_date: '2019'
+      bh_mx_marketing_display.cost_sum: NOT NULL
       arch_campaigns_admin.medium: Display
-    sorts: [mx_marketing.date_month 0, arch_campaigns_admin.service_line]
+    sorts: [bh_mx_marketing_display.date_month 0, arch_campaigns_admin.service_line]
     limit: 500
     total: true
     query_timezone: America/New_York
@@ -77,25 +77,25 @@
           custom: {id: 71035339-296d-3322-8c40-6da8ba64663e, label: Custom, type: continuous,
             stops: [{color: "#ffffff", offset: 0}, {color: "#61ab68", offset: 100}]},
           options: {steps: 5, constraints: {mid: {type: median}}}}, bold: false, italic: false,
-        strikethrough: false, fields: [mx_marketing.clicks_sum]}, {type: along a scale...,
+        strikethrough: false, fields: [bh_mx_marketing_display.clicks_sum]}, {type: along a scale...,
         value: !!null '', background_color: "#3EB0D5", font_color: !!null '', color_application: {
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7, custom: {id: d83523c0-0c1a-316c-5eaf-f715f739e74b,
             label: Custom, type: continuous, stops: [{color: "#ffffff", offset: 0},
               {color: "#ab8a5a", offset: 100}]}, options: {steps: 5, constraints: {
               mid: {type: median}}}}, bold: false, italic: false, strikethrough: false,
-        fields: [mx_marketing.cost_sum]}, {type: along a scale..., value: !!null '',
+        fields: [bh_mx_marketing_display.cost_sum]}, {type: along a scale..., value: !!null '',
         background_color: "#3EB0D5", font_color: !!null '', color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7,
           custom: {id: f12aaf77-ebef-6ca9-3cca-904cb14cd2cc, label: Custom, type: continuous,
             stops: [{color: "#ffffff", offset: 0}, {color: "#4276BE", offset: 100}]},
           options: {steps: 5, constraints: {mid: {type: median}}, reverse: true}},
-        bold: false, italic: false, strikethrough: false, fields: [mx_marketing.cpc]},
+        bold: false, italic: false, strikethrough: false, fields: [bh_mx_marketing_display.cpc]},
       {type: along a scale..., value: !!null '', background_color: "#3EB0D5", font_color: !!null '',
         color_application: {collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7, custom: {
             id: d3744fa8-7fa0-d162-7ff2-efa63471f068, label: Custom, type: continuous,
             stops: [{color: "#ffffff", offset: 0}, {color: "#a247b2", offset: 100}]},
           options: {steps: 5, constraints: {min: {type: number, value: 0}, mid: {
                 type: percentile, value: 50}}}}, bold: false, italic: false, strikethrough: false,
-        fields: [mx_marketing.ctr]}]
+        fields: [bh_mx_marketing_display.ctr]}]
     conditional_formatting_include_totals: true
     conditional_formatting_include_nulls: false
     series_types: {}
@@ -107,24 +107,24 @@
   - title: Display - Overall Performance
     name: Display - Overall Performance
     model: client_bh_marketing
-    model: bh_mx_display
+    explore: bh_mx_display
     type: looker_line
-    fields: [arch_campaigns_admin.service_line, mx_marketing.cost_sum, mx_marketing.clicks_sum,
-      mx_marketing.date_month, mx_marketing.ctr]
+    fields: [arch_campaigns_admin.service_line, bh_mx_marketing_display.cost_sum, bh_mx_marketing_display.clicks_sum,
+      bh_mx_marketing_display.date_month, bh_mx_marketing_display.ctr]
     pivots: [arch_campaigns_admin.service_line]
-    fill_fields: [mx_marketing.date_month]
+    fill_fields: [bh_mx_marketing_display.date_month]
     filters:
-      bc360_mx_main.client: Beaumont Health
-      mx_marketing.date_date: 15 months ago for 15 months
+      bh_mx_display.client: Beaumont Health
+      bh_mx_marketing_display.date_date: 15 months ago for 15 months
       arch_campaigns_admin.medium: Display
-    sorts: [arch_campaigns_admin.service_line, mx_marketing.date_month 0]
+    sorts: [arch_campaigns_admin.service_line, bh_mx_marketing_display.date_month 0]
     limit: 500
     total: true
     row_total: left
-    dynamic_fields: [{table_calculation: daily_spend, label: "$ Daily Spend", expression: "${mx_marketing.cost_sum}\n\
-          \  /${mx_marketing.date_diff}", value_format: !!null '', value_format_name: usd,
+    dynamic_fields: [{table_calculation: daily_spend, label: "$ Daily Spend", expression: "${bh_mx_marketing_display.cost_sum}\n\
+          \  /${bh_mx_marketing_display.date_diff}", value_format: !!null '', value_format_name: usd,
         is_disabled: true, _kind_hint: measure, _type_hint: number}, {table_calculation: cpc,
-        label: "@ CPC", expression: "${mx_marketing.cost_sum:row_total}/${mx_marketing.clicks_sum:row_total}",
+        label: "@ CPC", expression: "${bh_mx_marketing_display.cost_sum:row_total}/${bh_mx_marketing_display.clicks_sum:row_total}",
         value_format: !!null '', value_format_name: usd, _kind_hint: supermeasure,
         _type_hint: number}]
     query_timezone: America/New_York
@@ -137,27 +137,27 @@
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
-    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.ctr, id: Row
-              Total - mx_marketing.ctr, name: Row Total - 5. Performance % CTR}, {
-            axisId: mx_marketing.ctr, id: 2018-02 - mx_marketing.ctr, name: 2018-02
-              - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-03 - mx_marketing.ctr,
-            name: 2018-03 - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-04
-              - mx_marketing.ctr, name: 2018-04 - 5. Performance % CTR}, {axisId: mx_marketing.ctr,
-            id: 2018-05 - mx_marketing.ctr, name: 2018-05 - 5. Performance % CTR},
-          {axisId: mx_marketing.ctr, id: 2018-06 - mx_marketing.ctr, name: 2018-06
-              - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-07 - mx_marketing.ctr,
-            name: 2018-07 - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-08
-              - mx_marketing.ctr, name: 2018-08 - 5. Performance % CTR}, {axisId: mx_marketing.ctr,
-            id: 2018-09 - mx_marketing.ctr, name: 2018-09 - 5. Performance % CTR},
-          {axisId: mx_marketing.ctr, id: 2018-10 - mx_marketing.ctr, name: 2018-10
-              - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-11 - mx_marketing.ctr,
-            name: 2018-11 - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2018-12
-              - mx_marketing.ctr, name: 2018-12 - 5. Performance % CTR}, {axisId: mx_marketing.ctr,
-            id: 2019-01 - mx_marketing.ctr, name: 2019-01 - 5. Performance % CTR},
-          {axisId: mx_marketing.ctr, id: 2019-02 - mx_marketing.ctr, name: 2019-02
-              - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2019-03 - mx_marketing.ctr,
-            name: 2019-03 - 5. Performance % CTR}, {axisId: mx_marketing.ctr, id: 2019-04
-              - mx_marketing.ctr, name: 2019-04 - 5. Performance % CTR}], showLabels: true,
+    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_display.ctr, id: Row
+              Total - bh_mx_marketing_display.ctr, name: Row Total - 5. Performance % CTR}, {
+            axisId: bh_mx_marketing_display.ctr, id: 2018-02 - bh_mx_marketing_display.ctr, name: 2018-02
+              - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-03 - bh_mx_marketing_display.ctr,
+            name: 2018-03 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-04
+              - bh_mx_marketing_display.ctr, name: 2018-04 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr,
+            id: 2018-05 - bh_mx_marketing_display.ctr, name: 2018-05 - 5. Performance % CTR},
+          {axisId: bh_mx_marketing_display.ctr, id: 2018-06 - bh_mx_marketing_display.ctr, name: 2018-06
+              - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-07 - bh_mx_marketing_display.ctr,
+            name: 2018-07 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-08
+              - bh_mx_marketing_display.ctr, name: 2018-08 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr,
+            id: 2018-09 - bh_mx_marketing_display.ctr, name: 2018-09 - 5. Performance % CTR},
+          {axisId: bh_mx_marketing_display.ctr, id: 2018-10 - bh_mx_marketing_display.ctr, name: 2018-10
+              - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-11 - bh_mx_marketing_display.ctr,
+            name: 2018-11 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2018-12
+              - bh_mx_marketing_display.ctr, name: 2018-12 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr,
+            id: 2019-01 - bh_mx_marketing_display.ctr, name: 2019-01 - 5. Performance % CTR},
+          {axisId: bh_mx_marketing_display.ctr, id: 2019-02 - bh_mx_marketing_display.ctr, name: 2019-02
+              - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2019-03 - bh_mx_marketing_display.ctr,
+            name: 2019-03 - 5. Performance % CTR}, {axisId: bh_mx_marketing_display.ctr, id: 2019-04
+              - bh_mx_marketing_display.ctr, name: 2019-04 - 5. Performance % CTR}], showLabels: true,
         showValues: true, unpinAxis: false, tickDensity: default, type: linear}, {
         label: !!null '', orientation: right, series: [{axisId: cpc, id: cpc, name: "@\
               \ CPC"}], showLabels: true, showValues: true, unpinAxis: false, tickDensity: default,
@@ -178,21 +178,21 @@
     legend_position: center
     series_types:
       cpc: column
-      Row Total - mx_marketing.ctr: area
+      Row Total - bh_mx_marketing_display.ctr: area
     point_style: none
     series_colors:
       cpc: "#4FA650"
     series_labels:
-      Row Total - mx_marketing.ctr: Overall CTR
-      Birth - mx_marketing.ctr: Birth
-      Heart & Vascular - mx_marketing.ctr: Heart & Vascular
-      Hyperbaric - mx_marketing.ctr: Hyperbaric
-      Mammography - mx_marketing.ctr: Mammography
-      Orthopedics - mx_marketing.ctr: Orthopedics
-      Primary Care - mx_marketing.ctr: Primary Care
-      Proton Therapy - mx_marketing.ctr: Proton Therapy
-      Weight Loss & Bariatric - mx_marketing.ctr: Weight Loss & Bariatric
-      Women's Health - mx_marketing.ctr: Women's Health
+      Row Total - bh_mx_marketing_display.ctr: Overall CTR
+      Birth - bh_mx_marketing_display.ctr: Birth
+      Heart & Vascular - bh_mx_marketing_display.ctr: Heart & Vascular
+      Hyperbaric - bh_mx_marketing_display.ctr: Hyperbaric
+      Mammography - bh_mx_marketing_display.ctr: Mammography
+      Orthopedics - bh_mx_marketing_display.ctr: Orthopedics
+      Primary Care - bh_mx_marketing_display.ctr: Primary Care
+      Proton Therapy - bh_mx_marketing_display.ctr: Proton Therapy
+      Weight Loss & Bariatric - bh_mx_marketing_display.ctr: Weight Loss & Bariatric
+      Women's Health - bh_mx_marketing_display.ctr: Women's Health
     show_value_labels: false
     label_density: 25
     x_axis_scale: auto
@@ -213,7 +213,7 @@
     labelSize: 10pt
     valueFormat: mmm-yy
     showLegend: false
-    hidden_fields: [mx_marketing.cost_sum, mx_marketing.clicks_sum]
+    hidden_fields: [bh_mx_marketing_display.cost_sum, bh_mx_marketing_display.clicks_sum]
     listen: {}
     row: 6
     col: 0
@@ -222,23 +222,23 @@
   - title: Display - Cumulative Investment (2019)
     name: Display - Cumulative Investment (2019)
     model: client_bh_marketing
-    model: bh_mx_display
+    explore: bh_mx_display
     type: looker_area
-    fields: [arch_campaigns_admin.service_line, mx_marketing.date_month, mx_marketing.cost_sum]
+    fields: [arch_campaigns_admin.service_line, bh_mx_marketing_display.date_month, bh_mx_marketing_display.cost_sum]
     pivots: [arch_campaigns_admin.service_line]
     filters:
-      bc360_mx_main.client: Beaumont Health
-      mx_marketing.date_date: '2019'
-      mx_marketing.cost_sum: NOT NULL
+      bh_mx_display.client: Beaumont Health
+      bh_mx_marketing_display.date_date: '2019'
+      bh_mx_marketing_display.cost_sum: NOT NULL
       arch_campaigns_admin.medium: Display
-    sorts: [arch_campaigns_admin.service_line 0, mx_marketing.date_month]
+    sorts: [arch_campaigns_admin.service_line 0, bh_mx_marketing_display.date_month]
     limit: 500
     total: true
     row_total: right
-    dynamic_fields: [{table_calculation: cost, label: "+ Cost", expression: 'running_total(${mx_marketing.cost_sum})',
+    dynamic_fields: [{table_calculation: cost, label: "+ Cost", expression: 'running_total(${bh_mx_marketing_display.cost_sum})',
         value_format: !!null '', value_format_name: usd_0, is_disabled: false, _kind_hint: measure,
         _type_hint: number}, {table_calculation: referrals, label: "+ Referrals",
-        expression: 'running_total(${mx_marketing.referrals_total})', value_format: !!null '',
+        expression: 'running_total(${bh_mx_marketing_display.referrals_total})', value_format: !!null '',
         value_format_name: usd_0, _kind_hint: dimension, _type_hint: 'null', is_disabled: true}]
     query_timezone: America/New_York
     x_axis_gridlines: false
@@ -270,7 +270,7 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    hidden_fields: [mx_marketing.cost_sum]
+    hidden_fields: [bh_mx_marketing_display.cost_sum]
     row: 13
     col: 0
     width: 12
@@ -278,20 +278,20 @@
   - title: Display - Cumulative Referrals (2019)
     name: Display - Cumulative Referrals (2019)
     model: client_bh_marketing
-    model: bh_mx_display
+    explore: bh_mx_display
     type: looker_area
-    fields: [mx_marketing.date_month, arch_campaigns_admin.service_line, mx_marketing.referrals_total]
+    fields: [bh_mx_marketing_display.date_month, arch_campaigns_admin.service_line, bh_mx_marketing_display.referrals_total]
     pivots: [arch_campaigns_admin.service_line]
     filters:
-      bc360_mx_main.client: Beaumont Health
-      mx_marketing.date_date: '2019'
-      mx_marketing.cost_sum: NOT NULL
+      bh_mx_display.client: Beaumont Health
+      bh_mx_marketing_display.date_date: '2019'
+      bh_mx_marketing_display.cost_sum: NOT NULL
       arch_campaigns_admin.medium: Display
-    sorts: [arch_campaigns_admin.service_line 0, mx_marketing.date_month]
+    sorts: [arch_campaigns_admin.service_line 0, bh_mx_marketing_display.date_month]
     limit: 500
     total: true
     row_total: right
-    dynamic_fields: [{table_calculation: referrals, label: "+ Referrals", expression: 'running_total(${mx_marketing.referrals_total})',
+    dynamic_fields: [{table_calculation: referrals, label: "+ Referrals", expression: 'running_total(${bh_mx_marketing_display.referrals_total})',
         value_format: !!null '', value_format_name: decimal_0, is_disabled: false,
         _kind_hint: measure, _type_hint: number}]
     query_timezone: America/New_York
@@ -324,7 +324,7 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    hidden_fields: [mx_marketing.referrals_total]
+    hidden_fields: [bh_mx_marketing_display.referrals_total]
     row: 13
     col: 12
     width: 12
