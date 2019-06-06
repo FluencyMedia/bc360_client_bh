@@ -2,11 +2,11 @@ include: "//bc360_marketing/*.view.lkml"
 
 view: bh_mx_marketing {
   view_label: "BH - Marketing Insights"
-  label: "BH - Marketing"
+  label: "BH - PPC/Display"
   extends: [mx_marketing_base]
 
   derived_table: {
-    # datagroup_trigger: dg_bc360_bq
+    datagroup_trigger: dg_bc360_mx_marketing
 
     sql:  SELECT
             mxmmd.*
