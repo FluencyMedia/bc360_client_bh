@@ -3,7 +3,7 @@ include: "//bc360_marketing/*.view.lkml"
 view: bh_mx_marketing {
   view_label: "BH - Marketing Insights"
   label: "BH - PPC/Display Combined"
-  extends: [mx_marketing_base]
+  extends: [mx_marketing]
 
   derived_table: {
     datagroup_trigger: dg_bc360_mx_marketing
