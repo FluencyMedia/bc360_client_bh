@@ -180,16 +180,25 @@
     series_colors:
       cpc: "#4FA650"
     series_labels:
-      Row Total - bh_mx_marketing_ppc.ctr: Overall CTR
-      Birth - bh_mx_marketing_ppc.ctr: Birth
+      Children's - bh_mx_marketing_ppc.ctr: Childrens
+      Emergency - bh_mx_marketing_ppc.ctr: Emergency
       Heart & Vascular - bh_mx_marketing_ppc.ctr: Heart & Vascular
       Hyperbaric - bh_mx_marketing_ppc.ctr: Hyperbaric
       Mammography - bh_mx_marketing_ppc.ctr: Mammography
+      Neurosciences - bh_mx_marketing_ppc.ctr: Neurosciences
       Orthopedics - bh_mx_marketing_ppc.ctr: Orthopedics
+      Onc - CRC - bh_mx_marketing_ppc.ctr: Onc - CRC
+      Onc - General - bh_mx_marketing_ppc.ctr: Onc - General
+      Sports Injury - bh_mx_marketing_ppc.ctr: Sports Injury
       Primary Care - bh_mx_marketing_ppc.ctr: Primary Care
+      Physical Therapy - bh_mx_marketing_ppc.ctr: Physical Therapy
       Proton Therapy - bh_mx_marketing_ppc.ctr: Proton Therapy
       Weight Loss & Bariatric - bh_mx_marketing_ppc.ctr: Weight Loss & Bariatric
       Women's Health - bh_mx_marketing_ppc.ctr: Women's Health
+      Birth - bh_mx_marketing_ppc.ctr: Birth
+      Urgent Care - bh_mx_marketing_ppc.ctr: Urgent Care
+      Vein Centers - bh_mx_marketing_ppc.ctr: Vein Centers
+      Row Total - bh_mx_marketing_ppc.ctr: Overall CTR
     show_value_labels: false
     label_density: 25
     x_axis_scale: auto
