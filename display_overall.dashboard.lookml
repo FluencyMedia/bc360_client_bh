@@ -12,7 +12,6 @@
     filters:
       bh_mx_display.client: Beaumont Health
       bh_mx_marketing_display.date_date: 15 months ago for 15 months
-      arch_campaigns_admin.medium: Display
     sorts: [arch_campaigns_admin.program, arch_campaigns_admin.service_line, bh_mx_marketing_display.date_start
         desc]
     limit: 500
@@ -59,7 +58,6 @@
       bh_mx_display.client: Beaumont Health
       bh_mx_marketing_display.date_date: '2019'
       bh_mx_marketing_display.cost_sum: NOT NULL
-      arch_campaigns_admin.medium: Display
     sorts: [bh_mx_marketing_display.date_month 0, arch_campaigns_admin.service_line]
     limit: 500
     total: true
@@ -116,7 +114,6 @@
     filters:
       bh_mx_display.client: Beaumont Health
       bh_mx_marketing_display.date_date: 15 months ago for 15 months
-      arch_campaigns_admin.medium: Display
     sorts: [arch_campaigns_admin.service_line, bh_mx_marketing_display.date_month 0]
     limit: 500
     total: true
@@ -230,7 +227,6 @@
       bh_mx_display.client: Beaumont Health
       bh_mx_marketing_display.date_date: '2019'
       bh_mx_marketing_display.cost_sum: NOT NULL
-      arch_campaigns_admin.medium: Display
     sorts: [arch_campaigns_admin.service_line 0, bh_mx_marketing_display.date_month]
     limit: 500
     total: true
@@ -286,7 +282,6 @@
       bh_mx_display.client: Beaumont Health
       bh_mx_marketing_display.date_date: '2019'
       bh_mx_marketing_display.cost_sum: NOT NULL
-      arch_campaigns_admin.medium: Display
     sorts: [arch_campaigns_admin.service_line 0, bh_mx_marketing_display.date_month]
     limit: 500
     total: true
