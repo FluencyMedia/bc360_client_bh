@@ -15,7 +15,7 @@ label: "Beaumont Health"
 
 explore: bc360_mx_main {
   from: arch_clients_admin
-  label: "BH - PPC/Display Combined"
+  label: "BH - Digital Marketing"
 
   join: arch_campaigns_admin {
     relationship: one_to_many
@@ -38,7 +38,7 @@ explore: bc360_mx_main {
 
 explore: bh_mx_ppc {
   from: arch_clients_admin
-  label: "BH - PPC Only"
+  label: "BH - PPC"
 
   join: arch_campaigns_admin {
     relationship: one_to_many
@@ -61,7 +61,7 @@ explore: bh_mx_ppc {
 
 explore: bh_mx_display {
   from: arch_clients_admin
-  label: "BH - Display Only"
+  label: "BH - Display"
 
   join: arch_campaigns_admin {
     relationship: one_to_many
