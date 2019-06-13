@@ -11,7 +11,7 @@ include: "//bc360_marketing/*.view.lkml"
 include: "*.view.lkml"
 include: "*.dashboard.lookml"
 
-label: "Beaumont Health"
+label: "Beaumont Health - MAIN"
 
 explore: bc360_mx_main {
   from: arch_clients_admin
