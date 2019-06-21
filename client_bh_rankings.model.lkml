@@ -25,7 +25,7 @@ explore: bh_rankings_all {
 
 explore: bh_rankings_bh {
   from: arch_terms_base
-  label: "BH - Rankings [BH Only]"
+  label: "BH - Rankings [BH]"
 
   join: bh_mx_rankings_bh {
     type: left_outer
@@ -37,6 +37,8 @@ explore: bh_rankings_bh {
 
 explore: struct_rankings_base_bh {
   label: "BH - Rankings [TEST]"
+
+  hidden: yes
 
   join: struct_rankings_base__urls_bh {
     sql: ,UNNEST(struct_rankings_base_bh.urls) as urls ;;
