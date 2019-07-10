@@ -21,6 +21,12 @@ explore: bh_rankings_all {
     sql_on: ${bh_rankings_all.search_term} = ${bh_rankings_all.search_term} AND
             ${bh_rankings_all.scan_month} = ${bh_mx_rankings_all.scan_month};;
   }
+
+  join: location_meta {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${location_meta.location} = ${bh_mx_rankings_all.location} ;;
+  }
 }
 
 explore: bh_rankings_bh {
@@ -32,6 +38,12 @@ explore: bh_rankings_bh {
     relationship: many_to_many
     sql_on: ${bh_rankings_bh.search_term} = ${bh_mx_rankings_bh.search_term} AND
             ${bh_rankings_bh.scan_month} = ${bh_mx_rankings_bh.scan_month};;
+  }
+
+  join: location_meta {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${location_meta.location} = ${bh_mx_rankings_bh.location} ;;
   }
 }
 
