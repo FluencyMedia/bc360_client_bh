@@ -18,7 +18,7 @@ explore: bh_rankings_all {
   join: bh_mx_rankings_all {
     type: left_outer
     relationship: many_to_many
-    sql_on: ${bh_rankings_all.search_term} = ${bh_rankings_all.search_term} AND
+    sql_on: ${bh_rankings_all.search_term} = ${bh_mx_rankings_all.search_term} AND
             ${bh_rankings_all.scan_month} = ${bh_mx_rankings_all.scan_month};;
   }
 
