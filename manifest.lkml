@@ -8,3 +8,4 @@ local_dependency: { project: "bc360_users" }
 local_dependency: { project: "bc360_outcomes" }
 local_dependency: { project: "bc360_marketing" }
 local_dependency: { project: "bc360_rankings" }
+local_dependency: { project: "bc360_roadmaps" }

@@ -1,4 +1,4 @@
-include: "//bc360_marketing/*.view.lkml"
+include: "//bc360_marketing/**/*.view.lkml"
 
 view: bh_mx_marketing {
   view_label: "BH - Marketing Insights"

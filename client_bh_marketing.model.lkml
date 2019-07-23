@@ -5,22 +5,27 @@ include: "//bc360_services/**/*.view.lkml"
 include: "//bc360_campaigns/**/*.view.lkml"
 include: "//bc360_outcomes/**/*.view.lkml"
 include: "//bc360_marketing/**/*.view.lkml"
+include: "//bc360_roadmaps/**/*.view.lkml"
 # include: "//bc360_users/**/*.view.lkml"
 
 
 include: "/**/*.view.lkml"
 include: "/**/*.dashboard.lookml"
 
-label: "Beaumont Health"
+label: "Beaumont Health Marketing"
 
-explore: bc360_mx_main {
+explore: bh_mx_roadmaps {
+  label: "BH - Roadmaps"
+}
+
+explore: bh_marketing {
   from: arch_clients_admin
   label: "BH - Digital Marketing"
 
   join: arch_campaigns_admin {
     relationship: one_to_many
     type: left_outer
-    sql_on: ${bc360_mx_main.organization_id} = ${arch_campaigns_admin.organization_id} ;;
+    sql_on: ${bh_marketing.organization_id} = ${arch_campaigns_admin.organization_id} ;;
   }
 
   join: bh_mx_marketing {
