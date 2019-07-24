@@ -16,6 +16,11 @@ label: "Beaumont Health"
 
 explore: bh_mx_roadmaps {
   label: "BH - Roadmaps"
+  join: arch_services {
+    relationship: one_to_many
+    type: left_outer
+    sql_on: ${bh_mx_roadmaps.service_line_code} = ${arch_services.service_line_code} ;;
+  }
 }
 
 explore: bh_marketing {
