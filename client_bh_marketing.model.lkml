@@ -12,7 +12,7 @@ include: "//bc360_roadmaps/**/*.view.lkml"
 include: "/**/*.view.lkml"
 include: "/**/*.dashboard.lookml"
 
-label: "Beaumont Health Marketing"
+label: "Beaumont Health"
 
 explore: bh_mx_roadmaps {
   label: "BH - Roadmaps"

@@ -9,7 +9,7 @@ include: "*.view.lkml"
 
 persist_with: dg_bc360_rankings
 
-label: "Beaumont Health Rankings"
+label: "Beaumont Health"
 
 explore: bh_rankings_all {
   from: arch_terms_base
