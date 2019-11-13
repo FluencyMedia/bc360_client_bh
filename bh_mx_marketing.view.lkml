@@ -63,14 +63,20 @@ view: bh_mx_marketing_display {
 
     sql:  SELECT
             ROW_NUMBER() OVER () row_id,
-            mxmmd.*
+            mxmmd.*,
+            dc.creative,
+            dc.creative_package,
+            dc.tagline,
+            dc.cta
           FROM flat_mx.mx_marketing_master_hour mxmmd
           LEFT JOIN arch_campaigns.arch_campaigns_base ap USING (adgroup_id)
           LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
+          LEFT JOIN mx_marketing.facts_creative_display dc USING (creative_id)
           WHERE ac.client_id = 'CLIENT-00001' AND
                 ap.agency = 'Fluency' AND
                 mxmmd.medium = 'Display' AND
-                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
+                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) AND
+                mxmmd.data >= DATE(2019,01,01);;
       partition_keys: ["date"]
     }
 
