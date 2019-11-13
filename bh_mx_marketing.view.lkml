@@ -82,6 +82,45 @@ view: bh_mx_marketing_display {
 
   dimension: row_id {
     primary_key: yes
+    hidden: yes
+
     sql: ${TABLE}.row_id ;;
   }
+
+  dimension: creative_filename {
+    group_label: "3. Channel"
+    label: "Creative Filename"
+    description: "Actual .JPG filename"
+
+    type: string
+    sql: ${TABLE}.creative ;;
+  }
+
+  dimension: creative_package {
+    group_label: "3. Channel"
+    label: "Creative Package"
+    description: "Overall creative package within campaign"
+
+    type: string
+    sql: IFNULL(${TABLE}.creative_package, "(No Package)") ;;
+  }
+
+  dimension: tagline {
+    group_label: "3. Channel"
+    label: "Creative Tagline"
+    description: "Overall creative package within campaign"
+
+    type: string
+    sql: IFNULL(${TABLE}.tagline, "(No Tagline)") ;;
+  }
+
+  dimension: cta {
+    group_label: "3. Channel"
+    label: "Creative CTA"
+    description: "Specific CTA included in ad"
+
+    type: string
+    sql: IFNULL(${TABLE}.cta, "(No CTA)") ;;
+  }
+
 }
