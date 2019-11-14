@@ -66,8 +66,10 @@ view: bh_mx_marketing_display {
             mxmmd.*,
             dc.creative,
             dc.creative_package,
+            dc.creative_format,
             dc.tagline,
-            dc.cta
+            dc.cta,
+            dc.filename
           FROM flat_mx.mx_marketing_master_hour mxmmd
           LEFT JOIN arch_campaigns.arch_campaigns_base ap USING (adgroup_id)
           LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
@@ -87,17 +89,44 @@ view: bh_mx_marketing_display {
     sql: ${TABLE}.row_id ;;
   }
 
-  dimension: creative_filename {
-    group_label: "3. Channel"
-    label: "Creative Filename"
-    description: "Actual .JPG filename"
+  dimension: creative_id {
+    group_label: "Z - Metadata"
+    label: "Creative ID"
+    description: "Asset ID [KORTX Pass-through]"
+
+    type: number
+    sql: ${TABLE}.creative ;;
+  }
+
+
+  dimension: creative {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative"
+    description: "Asset Filename [KORTX Pass-through]"
 
     type: string
     sql: ${TABLE}.creative ;;
   }
 
+  dimension: creative_filename {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Filename"
+    description: "Actual .JPG filename"
+
+    type: string
+    sql: IFNULL(${TABLE}.filename, ${TABLE}.creative) ;;
+
+    html: <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 100px;"/> ;;
+    link: {
+      url: "https://storage.cloud.google.com/bc360_source_assets_display/{{value}}"
+    }
+  }
+
   dimension: creative_package {
-    group_label: "3. Channel"
+    view_label: "3. Channel"
+    group_label: "Creative Details"
     label: "Creative Package"
     description: "Overall creative package within campaign"
 
@@ -106,7 +135,8 @@ view: bh_mx_marketing_display {
   }
 
   dimension: tagline {
-    group_label: "3. Channel"
+    view_label: "3. Channel"
+    group_label: "Creative Details"
     label: "Creative Tagline"
     description: "Overall creative package within campaign"
 
@@ -115,12 +145,23 @@ view: bh_mx_marketing_display {
   }
 
   dimension: cta {
-    group_label: "3. Channel"
+    view_label: "3. Channel"
+    group_label: "Creative Details"
     label: "Creative CTA"
     description: "Specific CTA included in ad"
 
     type: string
     sql: IFNULL(${TABLE}.cta, "(No CTA)") ;;
   }
+
+  dimension: creative_format {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Format"
+    description: "Pixel Dimensions of Creative Asset"
+
+    type: string
+    sql: IFNULL(${TABLE}.creative_format, "(Format Unknown)") ;;
+    }
 
 }
