@@ -68,6 +68,7 @@ view: bh_mx_marketing_display {
             dc.creative_package,
             dc.creative_format,
             dc.tagline,
+            dc.test_variation,
             dc.cta,
             dc.filename
           FROM flat_mx.mx_marketing_master_hour mxmmd
@@ -99,10 +100,10 @@ view: bh_mx_marketing_display {
   }
 
 
-  dimension: creative {
+  dimension: creative_name {
     view_label: "3. Channel"
     group_label: "Creative Details"
-    label: "Creative"
+    label: "Creative Name"
     description: "Asset Filename [KORTX Pass-through]"
 
     type: string
@@ -113,15 +114,34 @@ view: bh_mx_marketing_display {
     view_label: "3. Channel"
     group_label: "Creative Details"
     label: "Creative Filename"
-    description: "Actual .JPG filename"
+    description: "Actual .JPG file (No Path)"
 
     type: string
     sql: IFNULL(${TABLE}.filename, ${TABLE}.creative) ;;
+    }
+
+  dimension: creative_thumb_dim {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Thumb"
+    description: "Actual .JPG file"
+
+    type: string
+    sql: ${creative_filename} ;;
 
     html: <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 100px;"/> ;;
-    link: {
-      url: "https://storage.cloud.google.com/bc360_source_assets_display/{{value}}"
-    }
+
+  }
+
+  measure: creative_thumbs_mx {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Thumbs"
+    description: "Displays list of relevant thumbnails"
+
+    type: list
+    list_field: creative_thumb_dim
+
   }
 
   dimension: creative_package {
@@ -162,6 +182,16 @@ view: bh_mx_marketing_display {
 
     type: string
     sql: IFNULL(${TABLE}.creative_format, "(Format Unknown)") ;;
+    }
+
+  dimension: test_variation {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Test"
+    description: "Label for Test set"
+
+    type: string
+    sql: IFNULL(${TABLE}.test_variation, "(No Test)") ;;
     }
 
 }
