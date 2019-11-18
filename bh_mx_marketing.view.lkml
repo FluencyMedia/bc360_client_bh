@@ -129,8 +129,39 @@ view: bh_mx_marketing_display {
     type: string
     sql: ${creative_filename} ;;
 
-    html: <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 100px;"/> ;;
+    html: <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 150px;"/> ;;
 
+  }
+
+  dimension: creative_thumb_box {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Combo Box"
+    description: "Combo Box: Image | Tagline | CTA"
+
+    type: string
+    sql: ${creative_filename} ;;
+
+    html: <div style="width: 100%; height: 150px; overflow: hidden; align-items: center;">
+            <div style="font-variant: small-caps; font-weight: bold; font-size: 9px; padding:0px 5px;">{{creative_package._value}}</div>
+            <div style="height: 150px; width: 150px; display:table-cell; vertical-align:middle; text-align:center; float:left;">
+              <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 150px;"/>
+            </div>
+            <div style="margin-left: 175px">
+              <div style="font-style: italic; padding: 1px 5px; color: #333; background-color: #ccc;">{{tagline._value}}</div>
+              <div style="font-weight: bold; padding: 1px 5px; color: #ddd; background-color: #333;">{{cta._value}}</div>
+            </div>
+          </div>;;
+  }
+
+  measure: creative_combo_boxes {
+    view_label: "3. Channel"
+    group_label: "Creative Details"
+    label: "Creative Combo Boxes"
+    description: "Combo Box: Image | Tagline | CTA"
+
+    type:  list
+    list_field: creative_thumb_box
   }
 
   measure: creative_thumbs_mx {
