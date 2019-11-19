@@ -143,7 +143,7 @@ view: bh_mx_marketing_display {
     sql: ${creative_filename} ;;
 
     html: <div style="width: 100%; height: 150px; overflow: hidden; align-items: center;">
-            <div style="font-variant: small-caps; font-weight: bold; font-size: 9px; padding:0px 5px;">{{creative_package._value}}</div>
+            <div style="font-variant: small-caps; font-weight: bold; font-size: 11px; padding:0px 5px;">{{creative_package._value}}</div>
             <div style="height: 150px; width: 150px; display:table-cell; vertical-align:middle; text-align:center; float:left;">
               <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 150px;"/>
             </div>
