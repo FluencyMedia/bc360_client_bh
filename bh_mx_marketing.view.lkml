@@ -101,8 +101,7 @@ view: bh_mx_marketing_display {
 
 
   dimension: creative_name {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Name"
     description: "Asset Filename [KORTX Pass-through]"
 
@@ -111,8 +110,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: creative_filename {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Filename"
     description: "Actual .JPG file (No Path)"
 
@@ -121,8 +119,7 @@ view: bh_mx_marketing_display {
     }
 
   dimension: creative_thumb_dim {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Thumb"
     description: "Actual .JPG file"
 
@@ -134,8 +131,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: creative_thumb_box {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Combo Box"
     description: "Combo Box: Image | Tagline | CTA"
 
@@ -143,20 +139,30 @@ view: bh_mx_marketing_display {
     sql: ${creative_filename} ;;
 
     html: <div style="width: 100%; height: 150px; overflow: hidden; align-items: center;">
-            <div style="font-variant: small-caps; font-weight: bold; font-size: 11px; padding:0px 5px;">{{creative_package._value}}</div>
-            <div style="height: 150px; width: 150px; display:table-cell; vertical-align:middle; text-align:center; float:left;">
-              <img src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}" style="max-height: 150px; max-width: 150px;"/>
+            <div style="font-weight: 300; font-size: 11px;
+                        color: #666;
+                        border-bottom-style: solid; border-width: 1px; border-color: #888;
+                        margin-bottom: 2px;
+                        padding:0.5px 0px;">{{creative_package._value}} [{{test_variation._value}}]</div>
+            <div style="height: 170px; width: 170px;
+                        display:table-cell;
+                        vertical-align:middle; text-align:center; float:left;">
+              <img  src="https://storage.cloud.google.com/bc360_source_assets_display/{{value}}"
+                    style= "max-height: 150px; max-width: 150px;
+                            box-shadow: -3px 3px 2px #888;
+                            # border-style: solid; border-width: 0.5px; border-color: #999;
+                            "/>
             </div>
             <div style="margin-left: 175px">
               <div style="font-style: italic; padding: 1px 5px; color: #333; background-color: #ccc;">{{tagline._value}}</div>
               <div style="font-weight: bold; padding: 1px 5px; color: #ddd; background-color: #333;">{{cta._value}}</div>
+              <div style="font-style: italic; font-size: 9.50px; font-weight: 200; padding: 2px 5px; color: #444; ">{{creative_filename._value}}</div>
             </div>
           </div>;;
   }
 
   measure: creative_combo_boxes {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Combo Boxes"
     description: "Combo Box: Image | Tagline | CTA"
 
@@ -165,8 +171,7 @@ view: bh_mx_marketing_display {
   }
 
   measure: creative_thumbs_mx {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Thumbs"
     description: "Displays list of relevant thumbnails"
 
@@ -176,8 +181,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: creative_package {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Package"
     description: "Overall creative package within campaign"
 
@@ -186,8 +190,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: tagline {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Tagline"
     description: "Overall creative package within campaign"
 
@@ -196,8 +199,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: cta {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative CTA"
     description: "Specific CTA included in ad"
 
@@ -206,8 +208,7 @@ view: bh_mx_marketing_display {
   }
 
   dimension: creative_format {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Format"
     description: "Pixel Dimensions of Creative Asset"
 
@@ -216,8 +217,7 @@ view: bh_mx_marketing_display {
     }
 
   dimension: test_variation {
-    view_label: "3. Channel"
-    group_label: "Creative Details"
+    view_label: "3a. Creative"
     label: "Creative Test"
     description: "Label for Test set"
 
