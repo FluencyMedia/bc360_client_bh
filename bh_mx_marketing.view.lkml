@@ -78,8 +78,8 @@ view: bh_mx_marketing_display {
           WHERE ac.client_id = 'CLIENT-00001' AND
                 ap.agency = 'Fluency' AND
                 mxmmd.medium = 'Display' AND
-                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) AND
-                mxmmd.date >= DATE(2019,01,01);;
+                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) # AND
+                # mxmmd.date >= DATE(2019,01,01);;
       partition_keys: ["date"]
     }
 
