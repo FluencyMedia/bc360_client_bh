@@ -15,9 +15,9 @@ include: "/**/*.dashboard.lookml"
 
 label: "Beaumont Health"
 
-explore: bh_mx_analytics {
-  label: "BH - Website Analytics"
-}
+# explore: bh_mx_analytics {
+#   label: "BH - Website Analytics"
+# }
 
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.

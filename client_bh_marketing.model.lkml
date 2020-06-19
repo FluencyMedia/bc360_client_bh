@@ -68,6 +68,7 @@ explore: bh_mx_ppc {
     type: left_outer
     sql_on: ${bh_mx_marketing_ppc.outcome_tracker_id} = ${arch_outcomes_admin.outcome_tracker_id} ;;
   }
+
 }
 
 explore: bh_mx_display {
