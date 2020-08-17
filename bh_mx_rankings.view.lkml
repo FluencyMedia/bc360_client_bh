@@ -27,7 +27,7 @@ view: bh_mx_rankings_bh {
     datagroup_trigger: dg_bc360_rankings
 
     sql: SELECT
-            ROW_NUMBER() OVER () row_index,
+            # ROW_NUMBER() OVER () row_index,
             *
           FROM `bc360-main.mx_rankings.mx_rankings_core`
           WHERE domain LIKE "%beaumont.org%";;
