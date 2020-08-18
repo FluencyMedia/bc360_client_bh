@@ -11,6 +11,27 @@ persist_with: dg_bc360_rankings
 
 label: "Beaumont Health"
 
+explore: struct_rankings_base_bh {
+  label: "BH - Rankings [STRUCT]"
+  view_label: "BH - Rankings"
+
+  hidden: no
+
+  join: struct_rankings_base_bh__urls {
+    sql: ,UNNEST(struct_rankings_base_bh.urls) as struct_rankings_base_bh__urls ;;
+    relationship: one_to_many
+  }
+
+  join: struct_rankings_base_bh__result_details {
+    sql: ,UNNEST(struct_rankings_base_bh.result_details) as struct_rankings_base_bh__result_details ;;
+    relationship: one_to_many
+  }
+
+}
+
+
+########### LEGACY EXPLORES ###########
+
 explore: bh_rankings_all {
   from: arch_terms_base
   label: "BH - Rankings [All]"
@@ -20,7 +41,7 @@ explore: bh_rankings_all {
     type: left_outer
     relationship: many_to_many
     sql_on: ${bh_rankings_all.search_term} = ${bh_mx_rankings_all.search_term} AND
-            ${bh_rankings_all.scan_month} = ${bh_mx_rankings_all.scan_month};;
+      ${bh_rankings_all.scan_month} = ${bh_mx_rankings_all.scan_month};;
   }
 
   join: location_meta {
@@ -39,7 +60,7 @@ explore: bh_rankings_bh {
     type: left_outer
     relationship: many_to_many
     sql_on: ${bh_rankings_bh.search_term} = ${bh_mx_rankings_bh.search_term} AND
-            ${bh_rankings_bh.scan_month} = ${bh_mx_rankings_bh.scan_month};;
+      ${bh_rankings_bh.scan_month} = ${bh_mx_rankings_bh.scan_month};;
   }
 
   join: location_meta {
@@ -47,21 +68,4 @@ explore: bh_rankings_bh {
     relationship: many_to_one
     sql_on: ${location_meta.location} = ${bh_mx_rankings_bh.location} ;;
   }
-}
-
-explore: struct_rankings_base_bh {
-  label: "BH - Rankings [STRUCT]"
-
-  hidden: no
-
-  join: struct_rankings_base_bh__urls {
-    sql: ,UNNEST(struct_rankings_base_bh.urls) as struct_rankings_base_bh__urls ;;
-    relationship: one_to_many
-  }
-
-  join: struct_rankings_base_bh__result_details {
-    sql: ,UNNEST(struct_rankings_base_bh.result_details) as struct_rankings_base_bh__result_details ;;
-    relationship: one_to_many
-  }
-
 }
