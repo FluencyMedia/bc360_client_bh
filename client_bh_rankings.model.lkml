@@ -1,9 +1,9 @@
-include: "//bc360_admin/*.lkml"
-include: "//bc360_admin/bc360_triggers.lkml"
-include: "//bc360_clients/*.view.lkml"
-include: "//bc360_services/*.view.lkml"
-include: "//bc360_campaigns/*.view.lkml"
-include: "//bc360_rankings/*.view.lkml"
+include: "//bc360_admin/**/*.lkml"
+include: "//bc360_admin/**/bc360_triggers.lkml"
+include: "//bc360_clients/**/*.view.lkml"
+include: "//bc360_services/**/*.view.lkml"
+include: "//bc360_campaigns/**/*.view.lkml"
+include: "//bc360_rankings/**/*.view.lkml"
 
 include: "*.view.lkml"
 
@@ -14,6 +14,7 @@ label: "Beaumont Health"
 explore: bh_rankings_all {
   from: arch_terms_base
   label: "BH - Rankings [All]"
+  hidden: yes
 
   join: bh_mx_rankings_all {
     type: left_outer
@@ -32,6 +33,7 @@ explore: bh_rankings_all {
 explore: bh_rankings_bh {
   from: arch_terms_base
   label: "BH - Rankings [BH]"
+  hidden: yes
 
   join: bh_mx_rankings_bh {
     type: left_outer
@@ -53,12 +55,12 @@ explore: struct_rankings_base_bh {
   hidden: no
 
   join: struct_rankings_base_bh__urls {
-    sql: ,UNNEST(struct_rankings_base_bh.urls) as urls ;;
+    sql: ,UNNEST(struct_rankings_base_bh.urls) as struct_rankings_base_bh__urls ;;
     relationship: one_to_many
   }
 
   join: struct_rankings_base_bh__result_details {
-    sql: ,UNNEST(struct_rankings_base_bh.result_details) as result_details ;;
+    sql: ,UNNEST(struct_rankings_base_bh.result_details) as struct_rankings_base_bh__result_details ;;
     relationship: one_to_many
   }
 

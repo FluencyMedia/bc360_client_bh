@@ -1,4 +1,4 @@
-include: "//bc360_rankings/*.view.lkml"
+include: "//bc360_rankings/**/*.view.lkml"
 
 view: bh_mx_rankings_all {
   extends: [mx_rankings_core]
@@ -43,15 +43,15 @@ view: bh_mx_rankings_bh {
 view: struct_rankings_base_bh {
   extends: [struct_rankings_base]
 
-  sql_table_name:  bc360-main.mx_rankings.struct_rankings_base_bh;;
+  # sql_table_name:  bc360-main.mx_rankings.struct_rankings_base_bh;;
 
-  # derived_table: {
-  #   datagroup_trigger: dg_bc360_rankings
-  #
-  #   sql: SELECT
-  #         *
-  #       FROM `bc360-main.mx_rankings.struct_rankings_base_bh`  ;;
-  # }
+  derived_table: {
+   datagroup_trigger: dg_bc360_rankings
+     sql: SELECT
+        ROW_NUMBER() OVER () row_index,
+        *
+       FROM `bc360-main.mx_rankings.struct_rankings_base_bh`  ;;
+  }
 
 }
 
