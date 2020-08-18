@@ -48,16 +48,16 @@ explore: bh_rankings_bh {
 }
 
 explore: struct_rankings_base_bh {
-  label: "BH - Rankings [TEST]"
+  label: "BH - Rankings [STRUCT]"
 
-  hidden: yes
+  hidden: no
 
-  join: struct_rankings_base__urls_bh {
+  join: struct_rankings_base_bh__urls {
     sql: ,UNNEST(struct_rankings_base_bh.urls) as urls ;;
     relationship: one_to_many
   }
 
-  join: struct_rankings_base__result_details_bh {
+  join: struct_rankings_base_bh__result_details {
     sql: ,UNNEST(struct_rankings_base_bh.result_details) as result_details ;;
     relationship: one_to_many
   }
