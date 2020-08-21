@@ -5,25 +5,53 @@ include: "//bc360_services/**/*.view.lkml"
 include: "//bc360_campaigns/**/*.view.lkml"
 include: "//bc360_rankings/**/*.view.lkml"
 
-include: "*.view.lkml"
+include: "/**/*.view.lkml"
 
 persist_with: dg_bc360_rankings
 
 label: "Beaumont Health"
 
-explore: struct_rankings_base_bh {
-  label: "BH - Rankings [STRUCT]"
+explore: struct_rankings_base_bh_only {
+  label: "BH - Rankings [ONLY]"
   view_label: "BH - Rankings"
 
   hidden: no
 
-  join: struct_rankings_base_bh__urls {
-    sql: ,UNNEST(struct_rankings_base_bh.urls) as struct_rankings_base_bh__urls ;;
+  join: struct_rankings_base_bh_only__urls {
+    sql: ,UNNEST(struct_rankings_base_bh_only.urls) as struct_rankings_base_bh_only__urls ;;
     relationship: one_to_many
   }
 
-  join: struct_rankings_base_bh__result_details {
-    sql: ,UNNEST(struct_rankings_base_bh.result_details) as struct_rankings_base_bh__result_details ;;
+  join: struct_rankings_base_bh_only__result_details {
+    sql: ,UNNEST(struct_rankings_base_bh_only.result_details) as struct_rankings_base_bh_only__result_details ;;
+    relationship: one_to_many
+  }
+
+  join: struct_rankings_base_bh_only__domain_meta {
+    sql: ,UNNEST(struct_rankings_base_bh_only.domain_meta) as struct_rankings_base_bh_only__domain_meta ;;
+    relationship: one_to_many
+  }
+
+}
+
+explore: struct_rankings_base_bh_all {
+  label: "BH - Rankings [ALL]"
+  view_label: "BH - Rankings"
+
+  hidden: no
+
+  join: struct_rankings_base_bh_all__urls {
+    sql: ,UNNEST(struct_rankings_base_bh_all.urls) as struct_rankings_base_bh_all__urls ;;
+    relationship: one_to_many
+  }
+
+  join: struct_rankings_base_bh_all__result_details {
+    sql: ,UNNEST(struct_rankings_base_bh_all.result_details) as struct_rankings_base_bh_all__result_details ;;
+    relationship: one_to_many
+  }
+
+  join: struct_rankings_base_bh_all__domain_meta {
+    sql: ,UNNEST(struct_rankings_base_bh_all.domain_meta) as struct_rankings_base_bh_all__domain_meta ;;
     relationship: one_to_many
   }
 

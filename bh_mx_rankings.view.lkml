@@ -39,26 +39,3 @@ view: bh_mx_rankings_bh {
     sql: ${TABLE}.row_index ;;
   }
 }
-
-view: struct_rankings_base_bh {
-  extends: [struct_rankings_base]
-
-  # sql_table_name:  bc360-main.mx_rankings.struct_rankings_base_bh;;
-
-  derived_table: {
-   datagroup_trigger: dg_bc360_rankings
-     sql: SELECT
-        ROW_NUMBER() OVER () row_index,
-        *
-       FROM `bc360-main.mx_rankings.struct_rankings_base_bh`  ;;
-  }
-
-}
-
-view: struct_rankings_base_bh__urls {
-  extends: [struct_rankings_base__urls]
-}
-
-view: struct_rankings_base_bh__result_details {
-  extends: [struct_rankings_base__result_details]
-}
