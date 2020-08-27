@@ -32,6 +32,11 @@ explore: struct_rankings_base_bh_only {
     relationship: one_to_many
   }
 
+  join: location_meta_bh {
+    relationship: many_to_one
+    sql_on: ${struct_rankings_base_bh_only.location} = ${location_meta_bh.zipkey} ;;
+  }
+
 }
 
 explore: struct_rankings_base_bh_all {
@@ -55,6 +60,10 @@ explore: struct_rankings_base_bh_all {
     relationship: one_to_many
   }
 
+  join: location_meta_bh {
+    relationship: many_to_one
+    sql_on: ${struct_rankings_base_bh_all.location} = ${location_meta_bh.zipkey};;
+  }
 }
 
 

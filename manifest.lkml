@@ -10,3 +10,7 @@ local_dependency: { project: "bc360_outcomes" }
 local_dependency: { project: "bc360_marketing" }
 local_dependency: { project: "bc360_rankings" }
 local_dependency: { project: "bc360_roadmaps" }
+
+constant: mapbox_api_key {
+  value: "sk.eyJ1IjoibHN0YW5ldmljaCIsImEiOiJja2VkMG12NjkwMjZjMnJxeDZsdDlsbHo4In0.Wg-3eSHZxvAq5TKQDXLcOg"
+}
