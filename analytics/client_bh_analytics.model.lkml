@@ -11,7 +11,7 @@ include: "//bc360_roadmaps/**/*.view.lkml"
 
 
 include: "/**/*.view.lkml"
-include: "/**/*.dashboard.lookml"
+# include: "/analytics/*.dashboard.lookml"
 
 label: "Beaumont Health"
 
