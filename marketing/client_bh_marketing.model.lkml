@@ -45,6 +45,13 @@ explore: bh_marketing {
     type: left_outer
     sql_on: ${bh_mx_marketing.outcome_tracker_id} = ${arch_outcomes_admin.outcome_tracker_id} ;;
   }
+
+  join: analyst_notes_bh {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${arch_campaigns_admin.service_line_code} = ${analyst_notes_bh.target};;
+  }
+
 }
 
 explore: bh_mx_ppc {
@@ -67,6 +74,12 @@ explore: bh_mx_ppc {
     relationship: many_to_one
     type: left_outer
     sql_on: ${bh_mx_marketing_ppc.outcome_tracker_id} = ${arch_outcomes_admin.outcome_tracker_id} ;;
+  }
+
+  join: analyst_notes_bh {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${arch_campaigns_admin.service_line_code} = ${analyst_notes_bh.target};;
   }
 
 }
