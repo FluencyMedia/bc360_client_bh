@@ -13,7 +13,7 @@ include: "//bc360_roadmaps/**/*.view.lkml"
 include: "/**/*.view.lkml"
 # include: "/analytics/*.dashboard.lookml"
 
-label: "Beaumont Health"
+label: "Beaumont Analytics"
 
 # explore: bh_mx_analytics {
 #   label: "BH - Website Analytics"
