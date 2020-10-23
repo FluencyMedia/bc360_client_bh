@@ -10,7 +10,6 @@ view: bh_mx_marketing {
 
     sql:  SELECT
             ROW_NUMBER() OVER () row_id,
-            TIMESTAMP_TRUNC(TIMESTAMP_ADD(TIMESTAMP(date), INTERVAL hour HOUR), HOUR) timestamp,
             mxmmd.*
           FROM flat_mx.mx_marketing_master_hour mxmmd
           LEFT JOIN arch_campaigns.arch_campaigns_base ap USING (adgroup_id)
@@ -19,6 +18,7 @@ view: bh_mx_marketing {
                 ap.agency = 'Fluency' AND
                 mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
           partition_keys: ["date"]
+          cluster_keys: ["adgroup_id", "timestamp"]
   }
 
   dimension: row_id {
@@ -37,7 +37,6 @@ view: bh_mx_marketing_ppc {
 
     sql:  SELECT
             ROW_NUMBER() OVER () row_id,
-            TIMESTAMP_TRUNC(TIMESTAMP_ADD(TIMESTAMP(date), INTERVAL hour HOUR), HOUR) timestamp,
             mxmmd.*
           FROM flat_mx.mx_marketing_master_hour mxmmd
           LEFT JOIN arch_campaigns.arch_campaigns_base ap USING (adgroup_id)
@@ -46,7 +45,8 @@ view: bh_mx_marketing_ppc {
                 ap.agency = 'Fluency' AND
                 mxmmd.medium = 'PPC' AND
                 mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
-      partition_keys: ["date"]
+          partition_keys: ["date"]
+          cluster_keys: ["adgroup_id", "timestamp"]
     }
 
   dimension: row_id {
@@ -83,6 +83,8 @@ view: bh_mx_marketing_display {
                 mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) # AND
                 # mxmmd.date >= DATE(2019,01,01);;
       partition_keys: ["date"]
+      cluster_keys: ["adgroup_id", "timestamp"]
+
     }
 
   dimension: row_id {
