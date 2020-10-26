@@ -2,6 +2,7 @@ project_name: "client_bh"
 
 local_dependency: { project: "bc360_admin" }
 local_dependency: { project: "bc360_analytics" }
+local_dependency: { project: "bc360_timeframes" }
 local_dependency: { project: "bc360_clients" }
 local_dependency: { project: "bc360_services" }
 local_dependency: { project: "bc360_campaigns" }

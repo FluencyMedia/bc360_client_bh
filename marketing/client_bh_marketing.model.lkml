@@ -7,6 +7,7 @@ include: "//bc360_campaigns/**/*.view.lkml"
 include: "//bc360_outcomes/**/*.view.lkml"
 include: "//bc360_marketing/**/*.view.lkml"
 include: "//bc360_roadmaps/**/*.view.lkml"
+include: "//bc360_timeframes/**/*.view.lkml"
 # include: "//bc360_users/**/*.view.lkml"
 
 
