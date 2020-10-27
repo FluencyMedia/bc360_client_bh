@@ -30,6 +30,7 @@ explore: bh_marketing {
   label: "BH - Digital Marketing"
 
   join: arch_campaigns {
+    from: bh_arch_campaigns
     relationship: one_to_many
     type: left_outer
     sql_on: ${bh_marketing.organization_id} = ${arch_campaigns.organization_id} ;;
@@ -91,6 +92,7 @@ explore: bh_mx_ppc {
   label: "BH - PPC"
 
   join: arch_campaigns {
+    from: bh_arch_campaigns
     relationship: one_to_many
     type: left_outer
     sql_on: ${bh_mx_ppc.organization_id} = ${arch_campaigns.organization_id} ;;
@@ -153,6 +155,7 @@ explore: bh_mx_display {
   label: "BH - Display"
 
   join: arch_campaigns {
+    from: bh_arch_campaigns
     relationship: one_to_many
     type: left_outer
     sql_on: ${bh_mx_display.organization_id} = ${arch_campaigns.organization_id} ;;
