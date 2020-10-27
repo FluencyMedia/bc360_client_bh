@@ -1,4 +1,48 @@
 include: "//bc360_marketing/**/*.view.lkml"
+include: "//bc360_campaigns/**/*.view.lkml"
+
+view: bh_arch_campaigns {
+  extends: [arch_campaigns]
+
+  derived_table: {
+    datagroup_trigger: dg_bc360_mx_marketing
+
+    sql:  SELECT
+            ap.medium,
+            ap.account,
+            ap.organization,
+            ap.user_manager,
+            ap.user_owner,
+            ap.campaign_category,
+            ap.campaign_group,
+            ap.campaign,
+            ap.program,
+            ap.service_line_code,
+            ap.service_line,
+            ap.service_offering,
+            ap.service_detail,
+            ap.campaign_label,
+            ap.campaign_region,
+            ap.campaign_location,
+            ap.campaign_tier,
+            ap.campaign_matchtype,
+            ap.agency,
+            ap.adgroup,
+            ap.mode,
+            ap.account_id,
+            ap.campaign_id,
+            ap.client_id,
+            ap.organization_id,
+            ap.adgroup_id
+          FROM arch_campaigns.arch_campaigns_base ap
+          LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
+          WHERE ac.client_id = 'CLIENT-00001' AND
+                ap.agency = 'Fluency'
+    ;;
+  }
+}
+
+
 
 view: bh_mx_marketing {
   view_label: "BH - Marketing Insights"
@@ -53,6 +97,12 @@ view: bh_mx_marketing_ppc {
     primary_key: yes
     sql: ${TABLE}.row_id ;;
   }
+}
+
+view: bh_mx_share_impr_click {
+  view_label: "BH - Marketing Insights"
+  label: "BH - Impr/Click Share"
+  extends: [mx_share_impr_click]
 }
 
 view: bh_mx_marketing_display {

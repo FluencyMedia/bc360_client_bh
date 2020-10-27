@@ -44,12 +44,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.impr_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.impr_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -101,12 +101,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.ctr]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.ctr]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -157,12 +157,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.outcomes_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.outcomes_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -213,12 +213,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.cpc]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.cpc]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -269,12 +269,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.clicks_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.clicks_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -326,12 +326,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.cpo]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.cpo]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -382,12 +382,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.otr]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.otr]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -438,16 +438,16 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_line
-    fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month,
-      bh_mx_marketing_ppc.impr_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_day_of_month, mx_marketing.date_month,
+      mx_marketing.impr_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     limit: 500
     dynamic_fields: [{table_calculation: measure_running, label: Measure (Running),
-        expression: 'running_total(${bh_mx_marketing_ppc.impr_sum})', value_format: !!null '',
+        expression: 'running_total(${mx_marketing.impr_sum})', value_format: !!null '',
         value_format_name: decimal_0, _kind_hint: measure, _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -489,7 +489,7 @@
       2020-08 - measure_running: "#b5c3fc"
     swap_axes: false
     defaults_version: 1
-    hidden_fields: [bh_mx_marketing_ppc.impr_sum]
+    hidden_fields: [mx_marketing.impr_sum]
     title_hidden: true
     row: 4
     col: 6
@@ -500,16 +500,16 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_line
-    fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month,
-      bh_mx_marketing_ppc.clicks_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_day_of_month, mx_marketing.date_month,
+      mx_marketing.clicks_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     limit: 500
     dynamic_fields: [{table_calculation: measure_running, label: Measure (Running),
-        expression: 'running_total(${bh_mx_marketing_ppc.clicks_sum})', value_format: !!null '',
+        expression: 'running_total(${mx_marketing.clicks_sum})', value_format: !!null '',
         value_format_name: decimal_0, _kind_hint: measure, _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -551,7 +551,7 @@
       2020-08 - measure_running: "#b5c3fc"
     swap_axes: false
     defaults_version: 1
-    hidden_fields: [bh_mx_marketing_ppc.clicks_sum]
+    hidden_fields: [mx_marketing.clicks_sum]
     title_hidden: true
     row: 6
     col: 6
@@ -562,16 +562,16 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_line
-    fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month,
-      bh_mx_marketing_ppc.outcomes_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_day_of_month, mx_marketing.date_month,
+      mx_marketing.outcomes_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     limit: 500
     dynamic_fields: [{table_calculation: measure_running, label: Measure (Running),
-        expression: 'running_total(${bh_mx_marketing_ppc.outcomes_sum})', value_format: !!null '',
+        expression: 'running_total(${mx_marketing.outcomes_sum})', value_format: !!null '',
         value_format_name: decimal_0, _kind_hint: measure, _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -613,7 +613,7 @@
       2020-08 - measure_running: "#b5c3fc"
     swap_axes: false
     defaults_version: 1
-    hidden_fields: [bh_mx_marketing_ppc.outcomes_sum]
+    hidden_fields: [mx_marketing.outcomes_sum]
     title_hidden: true
     row: 8
     col: 6
@@ -624,18 +624,18 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.impr_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.impr_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month]
     limit: 500
-    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${bh_mx_marketing_ppc.impr_sum},2),0)-\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.impr_sum},1),0)", value_format: !!null '',
+    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${mx_marketing.impr_sum},2),0)-\n\
+          \  coalesce(pivot_index(${mx_marketing.impr_sum},1),0)", value_format: !!null '',
         value_format_name: usd_0, is_disabled: false, _kind_hint: supermeasure, _type_hint: number},
       {table_calculation: change, label: "% Change", expression: "${total_change}/\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.impr_sum},2),0)", value_format: !!null '',
+          \  coalesce(pivot_index(${mx_marketing.impr_sum},2),0)", value_format: !!null '',
         value_format_name: percent_1, is_disabled: false, _kind_hint: supermeasure,
         _type_hint: number}]
     custom_color_enabled: true
@@ -680,7 +680,7 @@
     show_totals: true
     show_row_totals: true
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: false
     series_text_format:
       total_change:
@@ -689,9 +689,9 @@
         align: right
     x_axis_gridlines: false
     y_axis_gridlines: true
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: 2020-07 - bh_mx_marketing_ppc.cost_sum, name: 2020-07 - 5. Performance
-              $ Cost}, {axisId: bh_mx_marketing_ppc.cost_sum, id: 2020-08 - bh_mx_marketing_ppc.cost_sum,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: 2020-07 - mx_marketing.cost_sum, name: 2020-07 - 5. Performance
+              $ Cost}, {axisId: mx_marketing.cost_sum, id: 2020-08 - mx_marketing.cost_sum,
             name: 2020-08 - 5. Performance $ Cost}], showLabels: true, showValues: true,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
       {label: !!null '', orientation: right, series: [{axisId: total_change, id: total_change,
@@ -725,7 +725,7 @@
     up_color: "#3EB0D5"
     down_color: "#B1399E"
     total_color: "#C2DD67"
-    hidden_fields: [total_change, bh_mx_marketing_ppc.impr_sum]
+    hidden_fields: [total_change, mx_marketing.impr_sum]
     hidden_points_if_no: []
     series_labels: {}
     title_hidden: true
@@ -738,18 +738,18 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.cost_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.cost_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month]
     limit: 500
-    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${bh_mx_marketing_ppc.cost_sum},2),0)-\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.cost_sum},1),0)", value_format: !!null '',
+    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${mx_marketing.cost_sum},2),0)-\n\
+          \  coalesce(pivot_index(${mx_marketing.cost_sum},1),0)", value_format: !!null '',
         value_format_name: usd_0, is_disabled: false, _kind_hint: supermeasure, _type_hint: number},
       {table_calculation: change, label: "% Change", expression: "${total_change}/\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.cost_sum},2),0)", value_format: !!null '',
+          \  coalesce(pivot_index(${mx_marketing.cost_sum},2),0)", value_format: !!null '',
         value_format_name: percent_1, is_disabled: false, _kind_hint: supermeasure,
         _type_hint: number}]
     custom_color_enabled: true
@@ -794,7 +794,7 @@
     show_totals: true
     show_row_totals: true
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: false
     series_text_format:
       total_change:
@@ -803,9 +803,9 @@
         align: right
     x_axis_gridlines: false
     y_axis_gridlines: true
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: 2020-07 - bh_mx_marketing_ppc.cost_sum, name: 2020-07 - 5. Performance
-              $ Cost}, {axisId: bh_mx_marketing_ppc.cost_sum, id: 2020-08 - bh_mx_marketing_ppc.cost_sum,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: 2020-07 - mx_marketing.cost_sum, name: 2020-07 - 5. Performance
+              $ Cost}, {axisId: mx_marketing.cost_sum, id: 2020-08 - mx_marketing.cost_sum,
             name: 2020-08 - 5. Performance $ Cost}], showLabels: true, showValues: true,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
       {label: !!null '', orientation: right, series: [{axisId: total_change, id: total_change,
@@ -839,7 +839,7 @@
     up_color: "#3EB0D5"
     down_color: "#B1399E"
     total_color: "#C2DD67"
-    hidden_fields: [total_change, bh_mx_marketing_ppc.cost_sum]
+    hidden_fields: [total_change, mx_marketing.cost_sum]
     hidden_points_if_no: []
     series_labels: {}
     title_hidden: true
@@ -852,18 +852,18 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.clicks_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.clicks_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month]
     limit: 500
-    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${bh_mx_marketing_ppc.clicks_sum},2),0)-\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.clicks_sum},1),0)", value_format: !!null '',
+    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${mx_marketing.clicks_sum},2),0)-\n\
+          \  coalesce(pivot_index(${mx_marketing.clicks_sum},1),0)", value_format: !!null '',
         value_format_name: usd_0, is_disabled: false, _kind_hint: supermeasure, _type_hint: number},
       {table_calculation: change, label: "% Change", expression: "${total_change}/\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.clicks_sum},2),0)", value_format: !!null '',
+          \  coalesce(pivot_index(${mx_marketing.clicks_sum},2),0)", value_format: !!null '',
         value_format_name: percent_1, is_disabled: false, _kind_hint: supermeasure,
         _type_hint: number}]
     custom_color_enabled: true
@@ -908,7 +908,7 @@
     show_totals: true
     show_row_totals: true
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: false
     series_text_format:
       total_change:
@@ -917,9 +917,9 @@
         align: right
     x_axis_gridlines: false
     y_axis_gridlines: true
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: 2020-07 - bh_mx_marketing_ppc.cost_sum, name: 2020-07 - 5. Performance
-              $ Cost}, {axisId: bh_mx_marketing_ppc.cost_sum, id: 2020-08 - bh_mx_marketing_ppc.cost_sum,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: 2020-07 - mx_marketing.cost_sum, name: 2020-07 - 5. Performance
+              $ Cost}, {axisId: mx_marketing.cost_sum, id: 2020-08 - mx_marketing.cost_sum,
             name: 2020-08 - 5. Performance $ Cost}], showLabels: true, showValues: true,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
       {label: !!null '', orientation: right, series: [{axisId: total_change, id: total_change,
@@ -953,7 +953,7 @@
     up_color: "#3EB0D5"
     down_color: "#B1399E"
     total_color: "#C2DD67"
-    hidden_fields: [total_change, bh_mx_marketing_ppc.clicks_sum]
+    hidden_fields: [total_change, mx_marketing.clicks_sum]
     hidden_points_if_no: []
     series_labels: {}
     title_hidden: true
@@ -966,18 +966,18 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.impr_sum, bh_mx_marketing_ppc.outcomes_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.impr_sum, mx_marketing.outcomes_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month]
     limit: 500
-    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${bh_mx_marketing_ppc.outcomes_sum},2),0)-\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.outcomes_sum},1),0)", value_format: !!null '',
+    dynamic_fields: [{table_calculation: total_change, label: Total Change, expression: "coalesce(pivot_index(${mx_marketing.outcomes_sum},2),0)-\n\
+          \  coalesce(pivot_index(${mx_marketing.outcomes_sum},1),0)", value_format: !!null '',
         value_format_name: usd_0, is_disabled: false, _kind_hint: supermeasure, _type_hint: number},
       {table_calculation: change, label: "% Change", expression: "${total_change}/\n\
-          \  coalesce(pivot_index(${bh_mx_marketing_ppc.outcomes_sum},2),0)", value_format: !!null '',
+          \  coalesce(pivot_index(${mx_marketing.outcomes_sum},2),0)", value_format: !!null '',
         value_format_name: percent_1, is_disabled: false, _kind_hint: supermeasure,
         _type_hint: number}]
     custom_color_enabled: true
@@ -1022,7 +1022,7 @@
     show_totals: true
     show_row_totals: true
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: false
     series_text_format:
       total_change:
@@ -1031,9 +1031,9 @@
         align: right
     x_axis_gridlines: false
     y_axis_gridlines: true
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: 2020-07 - bh_mx_marketing_ppc.cost_sum, name: 2020-07 - 5. Performance
-              $ Cost}, {axisId: bh_mx_marketing_ppc.cost_sum, id: 2020-08 - bh_mx_marketing_ppc.cost_sum,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: 2020-07 - mx_marketing.cost_sum, name: 2020-07 - 5. Performance
+              $ Cost}, {axisId: mx_marketing.cost_sum, id: 2020-08 - mx_marketing.cost_sum,
             name: 2020-08 - 5. Performance $ Cost}], showLabels: true, showValues: true,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
       {label: !!null '', orientation: right, series: [{axisId: total_change, id: total_change,
@@ -1067,7 +1067,7 @@
     up_color: "#3EB0D5"
     down_color: "#B1399E"
     total_color: "#C2DD67"
-    hidden_fields: [total_change, bh_mx_marketing_ppc.impr_sum, bh_mx_marketing_ppc.outcomes_sum]
+    hidden_fields: [total_change, mx_marketing.impr_sum, mx_marketing.outcomes_sum]
     hidden_points_if_no: []
     series_labels: {}
     title_hidden: true
@@ -1080,11 +1080,11 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_column
-    fields: [bh_mx_marketing_ppc.cost_sum, bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.cost_sum, mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 12 months ago for 12 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 12 months ago for 12 months
+    sorts: [mx_marketing.date_month]
     limit: 500
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -1113,13 +1113,13 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: bh_mx_marketing_ppc.cost_sum, name: "$ Cost"}], showLabels: false,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: mx_marketing.cost_sum, name: "$ Cost"}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     series_types: {}
     series_colors:
-      bh_mx_marketing_ppc.cost_sum: "#86a9e3"
+      mx_marketing.cost_sum: "#86a9e3"
     trend_lines: []
     show_null_points: true
     interpolation: linear
@@ -1134,11 +1134,11 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_column
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.impr_sum]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.impr_sum]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 12 months ago for 12 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 12 months ago for 12 months
+    sorts: [mx_marketing.date_month]
     limit: 500
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -1167,13 +1167,13 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cost_sum,
-            id: bh_mx_marketing_ppc.cost_sum, name: "$ Cost"}], showLabels: false,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.cost_sum,
+            id: mx_marketing.cost_sum, name: "$ Cost"}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
     series_types: {}
     series_colors:
-      bh_mx_marketing_ppc.impr_sum: "#86a9e3"
+      mx_marketing.impr_sum: "#86a9e3"
     trend_lines: []
     show_null_points: true
     interpolation: linear
@@ -1188,12 +1188,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_column
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.clicks_sum, bh_mx_marketing_ppc.cpc,
-      bh_mx_marketing_ppc.ctr]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.clicks_sum, mx_marketing.cpc,
+      mx_marketing.ctr]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 12 months ago for 12 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 12 months ago for 12 months
+    sorts: [mx_marketing.date_month]
     limit: 500
     x_axis_gridlines: false
     y_axis_gridlines: false
@@ -1222,23 +1222,23 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.clicks_sum,
-            id: bh_mx_marketing_ppc.clicks_sum, name: "# Clicks"}], showLabels: false,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.clicks_sum,
+            id: mx_marketing.clicks_sum, name: "# Clicks"}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
-        type: linear}, {label: !!null '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cpc,
-            id: bh_mx_marketing_ppc.cpc, name: "$ CPC"}], showLabels: false, showValues: false,
+        type: linear}, {label: !!null '', orientation: left, series: [{axisId: mx_marketing.cpc,
+            id: mx_marketing.cpc, name: "$ CPC"}], showLabels: false, showValues: false,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear},
-      {label: !!null '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.ctr,
-            id: bh_mx_marketing_ppc.ctr, name: "% CTR"}], showLabels: false, showValues: false,
+      {label: !!null '', orientation: left, series: [{axisId: mx_marketing.ctr,
+            id: mx_marketing.ctr, name: "% CTR"}], showLabels: false, showValues: false,
         unpinAxis: false, tickDensity: default, tickDensityCustom: 5, type: linear}]
     hide_legend: true
     series_types:
-      bh_mx_marketing_ppc.cpc: line
-      bh_mx_marketing_ppc.ctr: line
+      mx_marketing.cpc: line
+      mx_marketing.ctr: line
     series_colors:
-      bh_mx_marketing_ppc.clicks_sum: "#86a9e3"
-      bh_mx_marketing_ppc.cpc: "#ba5a51"
-      bh_mx_marketing_ppc.ctr: "#5b46bf"
+      mx_marketing.clicks_sum: "#86a9e3"
+      mx_marketing.cpc: "#ba5a51"
+      mx_marketing.ctr: "#5b46bf"
     trend_lines: []
     show_null_points: true
     interpolation: linear
@@ -1253,12 +1253,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_column
-    fields: [bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.outcomes_sum, bh_mx_marketing_ppc.cpo,
-      bh_mx_marketing_ppc.otr]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_month, mx_marketing.outcomes_sum, mx_marketing.cpo,
+      mx_marketing.otr]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 12 months ago for 12 months
-    sorts: [bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 12 months ago for 12 months
+    sorts: [mx_marketing.date_month]
     limit: 500
     x_axis_gridlines: false
     y_axis_gridlines: false
@@ -1287,28 +1287,28 @@
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.outcomes_sum,
-            id: bh_mx_marketing_ppc.outcomes_sum, name: "# Outcomes"}], showLabels: false,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.outcomes_sum,
+            id: mx_marketing.outcomes_sum, name: "# Outcomes"}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, type: linear},
-      {label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.cpo, id: bh_mx_marketing_ppc.cpo,
+      {label: '', orientation: left, series: [{axisId: mx_marketing.cpo, id: mx_marketing.cpo,
             name: "$ CPO"}], showLabels: false, showValues: false, unpinAxis: false,
         tickDensity: default, type: linear}, {label: '', orientation: left, series: [
-          {axisId: bh_mx_marketing_ppc.otr, id: bh_mx_marketing_ppc.otr, name: "%\
+          {axisId: mx_marketing.otr, id: mx_marketing.otr, name: "%\
               \ OTR"}], showLabels: false, showValues: false, unpinAxis: false, tickDensity: default,
         type: linear}]
     hide_legend: true
     series_types:
-      bh_mx_marketing_ppc.cpc: line
-      bh_mx_marketing_ppc.ctr: line
-      bh_mx_marketing_ppc.cpo: line
-      bh_mx_marketing_ppc.otr: line
+      mx_marketing.cpc: line
+      mx_marketing.ctr: line
+      mx_marketing.cpo: line
+      mx_marketing.otr: line
     series_colors:
-      bh_mx_marketing_ppc.clicks_sum: "#86a9e3"
-      bh_mx_marketing_ppc.cpc: "#ba5a51"
-      bh_mx_marketing_ppc.ctr: "#5b46bf"
-      bh_mx_marketing_ppc.cpo: "#ba5a51"
-      bh_mx_marketing_ppc.otr: "#5b46bf"
-      bh_mx_marketing_ppc.outcomes_sum: "#86a9e3"
+      mx_marketing.clicks_sum: "#86a9e3"
+      mx_marketing.cpc: "#ba5a51"
+      mx_marketing.ctr: "#5b46bf"
+      mx_marketing.cpo: "#ba5a51"
+      mx_marketing.otr: "#5b46bf"
+      mx_marketing.outcomes_sum: "#86a9e3"
     trend_lines: []
     show_null_points: true
     interpolation: linear
@@ -1359,12 +1359,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: single_value
-    fields: [bh_mx_marketing_ppc.cost_sum, bh_mx_marketing_ppc.date_month]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.cost_sum, mx_marketing.date_month]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_month desc]
     limit: 500
     query_timezone: America/New_York
     custom_color_enabled: true
@@ -1416,12 +1416,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_grid
-    fields: [bh_mx_marketing_ppc.date_day_of_week, bh_mx_marketing_ppc.cost_sum,
-      bh_mx_marketing_ppc.outcomes_sum, bh_mx_marketing_ppc.cpo, bh_mx_marketing_ppc.otr]
-    fill_fields: [bh_mx_marketing_ppc.date_day_of_week]
+    fields: [mx_marketing.date_day_of_week, mx_marketing.cost_sum,
+      mx_marketing.outcomes_sum, mx_marketing.cpo, mx_marketing.otr]
+    fill_fields: [mx_marketing.date_day_of_week]
     filters:
-      bh_mx_marketing_ppc.date_month: 1 months ago for 1 months
-    sorts: [bh_mx_marketing_ppc.date_day_of_week]
+      mx_marketing.date_month: 1 months ago for 1 months
+    sorts: [mx_marketing.date_day_of_week]
     limit: 500
     total: true
     show_view_names: false
@@ -1443,23 +1443,23 @@
     show_totals: true
     show_row_totals: true
     series_labels:
-      bh_mx_marketing_ppc.date_day_of_week: Day of Week
-      bh_mx_marketing_ppc.cost_sum: Cost
-      bh_mx_marketing_ppc.outcomes_sum: Conversions
-      bh_mx_marketing_ppc.cpo: Cost/Conv
-      bh_mx_marketing_ppc.otr: Conv %
+      mx_marketing.date_day_of_week: Day of Week
+      mx_marketing.cost_sum: Cost
+      mx_marketing.outcomes_sum: Conversions
+      mx_marketing.cpo: Cost/Conv
+      mx_marketing.otr: Conv %
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: true
         palette:
           palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.outcomes_sum:
+      mx_marketing.outcomes_sum:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.cpo:
+      mx_marketing.cpo:
         is_active: true
         palette:
           palette_id: f4a0623c-fb22-6706-3e11-3663903382aa
@@ -1467,13 +1467,13 @@
           custom_colors:
           - "#dba18b"
           - "#bf5638"
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
     series_text_format:
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         align: right
     series_types: {}
     defaults_version: 1
@@ -1486,12 +1486,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_grid
-    fields: [bh_mx_marketing_ppc.cost_sum, bh_mx_marketing_ppc.outcomes_sum, bh_mx_marketing_ppc.cpo,
-      bh_mx_marketing_ppc.otr, bh_mx_marketing_ppc.device]
-    fill_fields: [bh_mx_marketing_ppc.device]
+    fields: [mx_marketing.cost_sum, mx_marketing.outcomes_sum, mx_marketing.cpo,
+      mx_marketing.otr, mx_marketing.device]
+    fill_fields: [mx_marketing.device]
     filters:
-      bh_mx_marketing_ppc.date_month: 1 months ago for 1 months
-    sorts: [bh_mx_marketing_ppc.cost_sum desc]
+      mx_marketing.date_month: 1 months ago for 1 months
+    sorts: [mx_marketing.cost_sum desc]
     limit: 500
     total: true
     show_view_names: false
@@ -1513,23 +1513,23 @@
     show_totals: true
     show_row_totals: true
     series_labels:
-      bh_mx_marketing_ppc.date_day_of_week: Day of Week
-      bh_mx_marketing_ppc.cost_sum: Cost
-      bh_mx_marketing_ppc.outcomes_sum: Conversions
-      bh_mx_marketing_ppc.cpo: Cost/Conv
-      bh_mx_marketing_ppc.otr: Conv %
+      mx_marketing.date_day_of_week: Day of Week
+      mx_marketing.cost_sum: Cost
+      mx_marketing.outcomes_sum: Conversions
+      mx_marketing.cpo: Cost/Conv
+      mx_marketing.otr: Conv %
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: true
         palette:
           palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.outcomes_sum:
+      mx_marketing.outcomes_sum:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.cpo:
+      mx_marketing.cpo:
         is_active: true
         palette:
           palette_id: f4a0623c-fb22-6706-3e11-3663903382aa
@@ -1537,13 +1537,13 @@
           custom_colors:
           - "#dba18b"
           - "#bf5638"
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
     series_text_format:
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         align: right
     series_types: {}
     defaults_version: 1
@@ -1556,11 +1556,11 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_grid
-    fields: [arch_outcomes_admin.outcome_type, bh_mx_marketing_ppc.outcomes_sum,
+    fields: [arch_outcomes_admin.outcome_type, mx_marketing.outcomes_sum,
       arch_outcomes_admin.outcome_type_name]
     filters:
-      bh_mx_marketing_ppc.date_month: 1 months ago for 1 months
-    sorts: [bh_mx_marketing_ppc.outcomes_sum desc]
+      mx_marketing.date_month: 1 months ago for 1 months
+    sorts: [mx_marketing.outcomes_sum desc]
     limit: 500
     total: true
     show_view_names: false
@@ -1582,23 +1582,23 @@
     show_totals: true
     show_row_totals: true
     series_labels:
-      bh_mx_marketing_ppc.date_day_of_week: Day of Week
-      bh_mx_marketing_ppc.cost_sum: Cost
-      bh_mx_marketing_ppc.outcomes_sum: Conversions
-      bh_mx_marketing_ppc.cpo: Cost/Conv
-      bh_mx_marketing_ppc.otr: Conv %
+      mx_marketing.date_day_of_week: Day of Week
+      mx_marketing.cost_sum: Cost
+      mx_marketing.outcomes_sum: Conversions
+      mx_marketing.cpo: Cost/Conv
+      mx_marketing.otr: Conv %
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: true
         palette:
           palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.outcomes_sum:
+      mx_marketing.outcomes_sum:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.cpo:
+      mx_marketing.cpo:
         is_active: true
         palette:
           palette_id: f4a0623c-fb22-6706-3e11-3663903382aa
@@ -1606,13 +1606,13 @@
           custom_colors:
           - "#dba18b"
           - "#bf5638"
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
     series_text_format:
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         align: right
     series_types: {}
     defaults_version: 1
@@ -1729,15 +1729,15 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_line
-    fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month,
-      bh_mx_marketing_ppc.cost_sum]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+    fields: [mx_marketing.date_day_of_month, mx_marketing.date_month,
+      mx_marketing.cost_sum]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [bh_mx_marketing_ppc.date_day_of_month, bh_mx_marketing_ppc.date_month]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [mx_marketing.date_day_of_month, mx_marketing.date_month]
     limit: 500
-    dynamic_fields: [{table_calculation: cost_running, label: Cost (Running), expression: 'running_total(${bh_mx_marketing_ppc.cost_sum})',
+    dynamic_fields: [{table_calculation: cost_running, label: Cost (Running), expression: 'running_total(${mx_marketing.cost_sum})',
         value_format: !!null '', value_format_name: usd_0, _kind_hint: measure, _type_hint: number}]
     x_axis_gridlines: false
     y_axis_gridlines: true
@@ -1777,7 +1777,7 @@
       2020-08 - cost_running: "#8ea5f2"
     swap_axes: false
     defaults_version: 1
-    hidden_fields: [bh_mx_marketing_ppc.cost_sum]
+    hidden_fields: [mx_marketing.cost_sum]
     title_hidden: true
     row: 2
     col: 6
@@ -1788,12 +1788,12 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_grid
-    fields: [arch_campaigns_admin.campaign, bh_mx_marketing_ppc.impr_sum, bh_mx_marketing_ppc.clicks_sum,
-      bh_mx_marketing_ppc.ctr, bh_mx_marketing_ppc.cpc, bh_mx_marketing_ppc.cost_sum,
-      bh_mx_marketing_ppc.outcomes_sum, bh_mx_marketing_ppc.otr, bh_mx_marketing_ppc.cpo]
+    fields: [arch_campaigns.campaign, mx_marketing.impr_sum, mx_marketing.clicks_sum,
+      mx_marketing.ctr, mx_marketing.cpc, mx_marketing.cost_sum,
+      mx_marketing.outcomes_sum, mx_marketing.otr, mx_marketing.cpo]
     filters:
-      bh_mx_marketing_ppc.date_month: 1 months ago for 1 months
-    sorts: [bh_mx_marketing_ppc.cost_sum desc]
+      mx_marketing.date_month: 1 months ago for 1 months
+    sorts: [mx_marketing.cost_sum desc]
     limit: 500
     total: true
     show_view_names: false
@@ -1815,27 +1815,27 @@
     show_totals: true
     show_row_totals: true
     series_labels:
-      bh_mx_marketing_ppc.date_day_of_week: Day of Week
-      bh_mx_marketing_ppc.cost_sum: Cost
-      bh_mx_marketing_ppc.outcomes_sum: Conversions
-      bh_mx_marketing_ppc.cpo: Cost/Conv
-      bh_mx_marketing_ppc.otr: Conv %
-      bh_mx_marketing_ppc.impr_sum: Impressions
-      bh_mx_marketing_ppc.clicks_sum: Clicks
-      bh_mx_marketing_ppc.ctr: CTR
-      bh_mx_marketing_ppc.cpc: Cost/Click
+      mx_marketing.date_day_of_week: Day of Week
+      mx_marketing.cost_sum: Cost
+      mx_marketing.outcomes_sum: Conversions
+      mx_marketing.cpo: Cost/Conv
+      mx_marketing.otr: Conv %
+      mx_marketing.impr_sum: Impressions
+      mx_marketing.clicks_sum: Clicks
+      mx_marketing.ctr: CTR
+      mx_marketing.cpc: Cost/Click
     series_cell_visualizations:
-      bh_mx_marketing_ppc.cost_sum:
+      mx_marketing.cost_sum:
         is_active: true
         palette:
           palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.outcomes_sum:
+      mx_marketing.outcomes_sum:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.cpo:
+      mx_marketing.cpo:
         is_active: true
         palette:
           palette_id: 66d96904-5440-8b42-5243-e0c15b29ccba
@@ -1843,22 +1843,22 @@
           custom_colors:
           - "#dba18b"
           - "#bf5638"
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.impr_sum:
+      mx_marketing.impr_sum:
         is_active: true
         palette:
           palette_id: 85de97da-2ded-4dec-9dbd-e6a7d36d5825
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.clicks_sum:
+      mx_marketing.clicks_sum:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
-      bh_mx_marketing_ppc.cpc:
+      mx_marketing.cpc:
         is_active: true
         palette:
           palette_id: 88fc5dc3-3fed-b89e-3e55-2f127c92f8fa
@@ -1866,13 +1866,13 @@
           custom_colors:
           - "#dba18b"
           - "#bf5638"
-      bh_mx_marketing_ppc.ctr:
+      mx_marketing.ctr:
         is_active: true
         palette:
           palette_id: afd46b40-e939-4ace-bffd-69d1bb16ee05
           collection_id: b43731d5-dc87-4a8e-b807-635bef3948e7
     series_text_format:
-      bh_mx_marketing_ppc.otr:
+      mx_marketing.otr:
         align: right
     series_types: {}
     defaults_version: 1
@@ -1885,13 +1885,13 @@
     model: client_bh_marketing
     explore: bh_mx_ppc
     type: looker_scatter
-    fields: [arch_campaigns_admin.campaign, bh_mx_marketing_ppc.date_month, bh_mx_marketing_ppc.cost_sum,
-      bh_mx_marketing_ppc.opc]
-    pivots: [bh_mx_marketing_ppc.date_month]
-    fill_fields: [bh_mx_marketing_ppc.date_month]
+    fields: [arch_campaigns.campaign, mx_marketing.date_month, mx_marketing.cost_sum,
+      mx_marketing.opc]
+    pivots: [mx_marketing.date_month]
+    fill_fields: [mx_marketing.date_month]
     filters:
-      bh_mx_marketing_ppc.date_month: 2 months ago for 2 months
-    sorts: [arch_campaigns_admin.campaign desc, bh_mx_marketing_ppc.date_month desc]
+      mx_marketing.date_month: 2 months ago for 2 months
+    sorts: [arch_campaigns_admin.campaign desc, mx_marketing.date_month desc]
     limit: 500
     column_limit: 50
     x_axis_gridlines: false
@@ -1917,18 +1917,18 @@
     x_axis_scale: auto
     y_axis_combined: true
     show_null_points: true
-    y_axes: [{label: '', orientation: left, series: [{axisId: bh_mx_marketing_ppc.clicks_sum,
-            id: bh_mx_marketing_ppc.clicks_sum, name: "# Clicks"}], showLabels: false,
+    y_axes: [{label: '', orientation: left, series: [{axisId: mx_marketing.clicks_sum,
+            id: mx_marketing.clicks_sum, name: "# Clicks"}], showLabels: false,
         showValues: false, unpinAxis: false, tickDensity: default, tickDensityCustom: 5,
         type: linear}]
-    size_by_field: bh_mx_marketing_ppc.opc
+    size_by_field: mx_marketing.opc
     hide_legend: true
     series_types: {}
     series_colors:
-      2020-07 - bh_mx_marketing_ppc.clicks_sum: "#a4bdf7"
-      2020-08 - bh_mx_marketing_ppc.clicks_sum: "#4276BE"
-      2020-07 - bh_mx_marketing_ppc.cost_sum: "#a4bdf7"
-      2020-08 - bh_mx_marketing_ppc.cost_sum: "#4276BE"
+      2020-07 - mx_marketing.clicks_sum: "#a4bdf7"
+      2020-08 - mx_marketing.clicks_sum: "#4276BE"
+      2020-07 - mx_marketing.cost_sum: "#a4bdf7"
+      2020-08 - mx_marketing.cost_sum: "#4276BE"
     series_labels: {}
     swap_axes: false
     hidden_fields: []
