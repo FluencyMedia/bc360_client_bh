@@ -1,6 +1,7 @@
 include: "//bc360_marketing/**/*.view.lkml"
 include: "//bc360_campaigns/**/*.view.lkml"
 
+
 view: bh_arch_campaigns {
   extends: [arch_campaigns]
 
@@ -41,7 +42,6 @@ view: bh_arch_campaigns {
     ;;
   }
 }
-
 
 
 view: bh_mx_marketing {
