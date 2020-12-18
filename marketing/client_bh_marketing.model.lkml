@@ -84,7 +84,21 @@ explore: bh_marketing {
     sql_on: ${mx_auction_insights.url_display_domain} = ${fact_domains.domain} ;;
   }
 
+  join: mx_queries_bh {
+    relationship: many_to_many
+    type: left_outer
 
+    sql_on: ((${mx_marketing.adgroup_id} = ${mx_queries_bh.adgroup_id})
+      AND (${mx_marketing.timestamp}) = ${mx_queries_bh.timestamp} );;
+  }
+
+  join: fact_keywords_bh {
+    relationship: many_to_one
+    type: left_outer
+
+    sql_on: ((${mx_queries_bh.adgroup_id} = ${fact_keywords_bh.adgroup_id})
+      AND (${mx_queries_bh.criterion_id}) = ${fact_keywords_bh.criterion_id} );;
+  }
 }
 
 explore: bh_mx_ppc {
@@ -146,7 +160,21 @@ explore: bh_mx_ppc {
     sql_on: ${mx_auction_insights.url_display_domain} = ${fact_domains.domain} ;;
   }
 
+  join: mx_queries_bh {
+    relationship: many_to_many
+    type: left_outer
 
+    sql_on: ((${mx_marketing.adgroup_id} = ${mx_queries_bh.adgroup_id})
+      AND (${mx_marketing.timestamp}) = ${mx_queries_bh.timestamp} );;
+  }
+
+  join: fact_keywords_bh {
+    relationship: many_to_one
+    type: left_outer
+
+    sql_on: ((${mx_queries_bh.adgroup_id} = ${fact_keywords_bh.adgroup_id})
+      AND (${mx_queries_bh.criterion_id}) = ${fact_keywords_bh.criterion_id} );;
+  }
 
 }
 
