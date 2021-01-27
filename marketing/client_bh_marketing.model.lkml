@@ -61,6 +61,12 @@ explore: bh_marketing {
     sql_on: ${mx_marketing.timestamp} = ${arch_timeframes.timestamp} ;;
   }
 
+  join: arch_timeframe_windows {
+    relationship: one_to_many
+    type: full_outer
+    sql_on: ${arch_timeframe_windows.timestamp} = ${arch_timeframes.timestamp} ;;
+  }
+
   join: mx_share_impr_click {
     relationship: one_to_many
     type: left_outer
@@ -135,6 +141,12 @@ explore: bh_mx_ppc {
     relationship: many_to_one
     type: left_outer
     sql_on: ${mx_marketing.timestamp} = ${arch_timeframes.timestamp} ;;
+  }
+
+  join: arch_timeframe_windows {
+    relationship: one_to_many
+    type: full_outer
+    sql_on: ${arch_timeframe_windows.timestamp} = ${arch_timeframes.timestamp} ;;
   }
 
   join: mx_share_impr_click {
