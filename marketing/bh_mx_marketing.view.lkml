@@ -34,7 +34,9 @@ view: bh_arch_campaigns {
             ap.campaign_id,
             ap.client_id,
             ap.organization_id,
-            ap.adgroup_id
+            ap.adgroup_id,
+            ap.channel_type,
+            ap.channel_subtype,
           FROM arch_campaigns.arch_campaigns_base ap
           LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
           WHERE ac.client_id = 'CLIENT-00001' AND
