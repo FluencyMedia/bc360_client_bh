@@ -61,8 +61,8 @@ view: bh_mx_marketing {
           LEFT JOIN arch_campaigns.arch_campaigns_base ap USING (adgroup_id)
           LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
           WHERE ac.client_id = 'CLIENT-00001' AND
-                ap.agency = 'Fluency' AND
-                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
+                ap.agency = 'Fluency' # AND
+                # mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
           partition_keys: ["date"]
           cluster_keys: ["adgroup_id", "timestamp"]
   }
@@ -89,8 +89,8 @@ view: bh_mx_marketing_ppc {
           LEFT JOIN arch_clients.arch_clients_base ac USING (organization_id)
           WHERE ac.client_id = 'CLIENT-00001' AND
                 ap.agency = 'Fluency' AND
-                mxmmd.medium = 'PPC' AND
-                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
+                mxmmd.medium = 'PPC' # AND
+                # mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY);;
           partition_keys: ["date"]
           cluster_keys: ["adgroup_id", "timestamp"]
     }
@@ -131,8 +131,8 @@ view: bh_mx_marketing_display {
           LEFT JOIN mx_marketing.facts_creative_display dc USING (creative_id)
           WHERE ac.client_id = 'CLIENT-00001' AND
                 ap.agency = 'Fluency' AND
-                mxmmd.medium = 'Display' AND
-                mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) # AND
+                mxmmd.medium = 'Display' # AND
+                # mxmmd.date <= DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 1 DAY) # AND
                 # mxmmd.date >= DATE(2019,01,01);;
       partition_keys: ["date"]
       cluster_keys: ["adgroup_id", "timestamp"]
